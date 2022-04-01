@@ -2,7 +2,8 @@
   "builds": [
     {
       "src": "./index.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": { "includeFiles": "./users,json" }
     }
   ],
   "routes": [
@@ -10,10 +11,5 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ],
-  "functions": {
-    "index.js": {
-      "includeFiles": "users.json"
-    }
-  }
+  ]
 }
