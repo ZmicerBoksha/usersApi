@@ -10,8 +10,6 @@ let __dirname = path.resolve();
 const app = express();
 const jsonParser = express.json();
 
-app.use(express.static(__dirname + "/public"));
-
 const filePath = "./users.json";
 app.get("/api/users", function (req, res) {
   const content = fs.readFileSync(filePath, "utf8");
